@@ -15,20 +15,20 @@ if has('gui_running')
 endif
 
 " vim-easy-align options
-source ~/vimfiles/setup_vim-easy-align.vim
+source ~/.vim/setup_vim-easy-align.vim
 
 " setup lightline
-source ~/vimfiles/setup_lightline.vim
+source ~/.vim/setup_lightline.vim
 
 " setup python
-source ~/vimfiles/setup_python-mode.vim
+source ~/.vim/setup_python-mode.vim
 
 " setup nerdtree git
-source ~/vimfiles/setup_nerdtree-git-plugin.vim
+source ~/.vim/setup_nerdtree-git-plugin.vim
 
 " settings for scratc vim
 "source ~/vimfiles/setup_scratch.vim
-source ~/vimfiles/setup_vim-notes.vim
+source ~/.vim/setup_vim-notes.vim
 
 " misc options
-source ~/vimfiles/setup_misc.vim
+source ~/.vim/setup_misc.vim
