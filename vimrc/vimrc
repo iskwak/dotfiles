@@ -1,5 +1,5 @@
 " setup vim-plug
-source ~/vimfiles/setup_vim-plug.vim
+source ~/.vim/setup_vim-plug.vim
 
 " add a colorscheme is a gui is running
 colorscheme seoul256
