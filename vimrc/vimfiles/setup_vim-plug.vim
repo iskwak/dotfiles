@@ -33,6 +33,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'kristiandupont/shades-of-teal'
 Plug 'widatama/vim-phoenix'
 Plug 'wutzara/vim-materialtheme'
+Plug 'crusoexia/vim-monokai'
 
 " markdown
 Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'

@@ -1,0 +1,4 @@
+configuration {
+    theme: ".local/share/rofi/themes/solarized";
+    font: "Awasome 10";
+}

@@ -1,0 +1,8 @@
+setxkbmap -layout us -option ctrl:nocaps &
+sleep 1
+xset +fp ~/.fonts/misc/
+# feh --bg-scale ~/Pictures/18.04_beaver_wp_4096x2304_optimized_AW.png &
+xsetroot -solid black &
+# dunno why.. but gotta xrdb twice
+xrdb ~/.Xresources
+~/bin/clock.sh | lemonbar -p -f -*-rissole-* &
