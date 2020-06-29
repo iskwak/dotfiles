@@ -275,6 +275,12 @@
         <command>rofi -show drun</command>
       </action>
     </keybind>
+    <keybind key="Super_R">
+      <action name="Execute">
+        <name>rofi</name>
+        <command>rofi -show drun</command>
+      </action>
+    </keybind>
     <!-- Take a screenshot of the current window with scrot when Alt+Print are pressed -->
     <keybind key="A-Print">
       <action name="Execute">
@@ -421,7 +427,7 @@
         <action name="Move"/>
       </mousebind>
       <mousebind button="Left" action="DoubleClick">
-        <action name="ToggleMaximize"/>
+        <action name="ToggleShade"/>
       </mousebind>
       <mousebind button="Up" action="Click">
         <action name="if">

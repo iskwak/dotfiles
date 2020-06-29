@@ -2,7 +2,8 @@
 source ~/.vim/setup_vim-plug.vim
 
 " add a colorscheme is a gui is running
-colorscheme monokai
+" colorscheme monokai
+colorscheme seoul256
 if has('gui_running')
     " remove the menu bar
     set guioptions-=m
