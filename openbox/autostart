@@ -1,4 +1,4 @@
-setxkbmap -layout us -option ctrl:nocaps &
+# setxkbmap -layout us -option ctrl:nocaps &
 xset +fp ~/.fonts/misc/
 feh --bg-scale ~/Pictures/wallpapers/FpJQd42.png &
 # xsetroot -solid black &
