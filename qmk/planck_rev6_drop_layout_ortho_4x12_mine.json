@@ -51,8 +51,8 @@
       "LT(3,KC_SPC)",
       "LT(3,KC_SPC)",
       "MO(2)",
+      "KC_RCTL",
       "MO(5)",
-      "KC_RALT",
       "KC_RGUI",
       "KC_RSFT"
     ],
