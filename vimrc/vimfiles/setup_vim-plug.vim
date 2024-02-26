@@ -23,10 +23,10 @@ Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 
 " vim gutter
-Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter', {'branch': 'main'}
 
 " python stuff
-Plug 'klen/python-mode'
+"Plug 'klen/python-mode'
 
 " color themes
 Plug 'junegunn/seoul256.vim'
