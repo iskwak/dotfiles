@@ -18,3 +18,9 @@
 
 (when (fboundp 'windmove-default-keybindings)
  (windmove-default-keybindings 'meta))
+
+
+;; default indentation is using spaces
+(setq-default indent-tab-mode nil)
+(setq-default tab-width 4)
+(setq c-basic-offset 4)
