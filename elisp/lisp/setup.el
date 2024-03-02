@@ -2,7 +2,7 @@
 
 (load-library "packages")
 (load-library "ui")
-
+;(load-library "pythonsetup")
 ;; save command history between sessions
 (savehist-mode)
 

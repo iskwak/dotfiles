@@ -1,4 +1,6 @@
 (load-theme 'seoul256 t)
+;(load-theme 'material t)
+;;(global-linum-mode t)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
@@ -6,7 +8,7 @@
 
 (setq initial-frame-alist
       (append initial-frame-alist
-              '((left . 564)
-		(top . 92)
+              '((left . 0)
+		(top . 0)
 		(width  . 261)
                 (height . 58))))
