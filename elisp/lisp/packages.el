@@ -9,6 +9,7 @@
 		clang-format
 		dired-sidebar
 		dockerfile-mode
+		evil
 		;;dash
 		;;flycheck-cmake
 		;;cmake-ide

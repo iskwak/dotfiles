@@ -1,7 +1,8 @@
-;;(setq inhibit-startup-message t)
+(setq inhibit-startup-message t)
 
-(load-library "packages")
 (load-library "ui")
+(load-library "packages")
+(load-library "evil_setup")
 ;(load-library "pythonsetup")
 ;; save command history between sessions
 (savehist-mode)
