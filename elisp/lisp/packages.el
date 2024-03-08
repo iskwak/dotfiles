@@ -10,6 +10,7 @@
 		dired-sidebar
 		dockerfile-mode
 		evil
+		;;spacemacs-theme
 		;;dash
 		;;flycheck-cmake
 		;;cmake-ide
