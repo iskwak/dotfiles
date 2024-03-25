@@ -9,7 +9,7 @@
  '(custom-safe-themes
    '("7fd8b914e340283c189980cd1883dbdef67080ad1a3a9cc3df864ca53bdc89cf" default))
  '(default-frame-alist '((vertical-scroll-bars)))
- '(package-selected-packages '(docker-tramp))
+ '(package-selected-packages '(nyan-mode docker-tramp))
  '(safe-local-variable-values
    '((cmake-ide-project-dir . "/app/nuwapen-embedded/misc/calibration")))
  '(tool-bar-mode nil))

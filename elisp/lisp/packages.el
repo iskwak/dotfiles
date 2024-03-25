@@ -10,7 +10,8 @@
 		dired-sidebar
 		dockerfile-mode
 		evil
-		;;spacemacs-theme
+		spacemacs-theme
+		nyan-mode
 		;;dash
 		;;flycheck-cmake
 		;;cmake-ide
@@ -18,7 +19,7 @@
 		))
 
 ;; refresh package list if it is not already available
-;;(when (not package-archive-contents) (package-refresh-contents))
+(when (not package-archive-contents) (package-refresh-contents))
 
 ;; install packages from the list that are not yet installed
 (dolist (pkg my-packages)

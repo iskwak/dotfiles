@@ -3,13 +3,16 @@
 (load-library "ui")
 (load-library "packages")
 (load-library "evil_setup")
+(load-library "nyan_setup")
 ;(load-library "pythonsetup")
 ;; save command history between sessions
 (savehist-mode)
 
 ;; move the buffer by a line, while keeping the cursor at the same place
-(global-set-key (kbd "C-.") 'scroll-up-line)
-(global-set-key (kbd "C-,") 'scroll-down-line)
+;;(global-set-key (kbd "C-.") 'scroll-up-line)
+;;(global-set-key (kbd "C-,") 'scroll-down-line)
+(global-set-key (kbd "M-,") 'scroll-up-line)
+(global-set-key (kbd "M-m") 'scroll-down-line)
 
 (setq enable-remote-dir-locals t)
 
