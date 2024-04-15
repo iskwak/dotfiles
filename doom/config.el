@@ -82,6 +82,12 @@
 
 (setq display-line-numbers-type nil)
 
+(global-set-key (kbd "M-,") 'scroll-up-line)
+(global-set-key (kbd "M-m") 'scroll-down-line)
+
+(use-package nyan-mode
+  :init
+  (nyan-mode))
 
 ;; ;; ;;(setq completion-cycle-threshold 't)
 ;; (use-package! vertico
