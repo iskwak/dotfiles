@@ -1,7 +1,7 @@
 (setq inhibit-startup-message t)
 
-(load-library "ui")
 (load-library "packages")
+(load-library "ui")
 (load-library "evil_setup")
 (load-library "nyan_setup")
 ;(load-library "pythonsetup")

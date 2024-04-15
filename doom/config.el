@@ -78,3 +78,32 @@
 
 (when (fboundp 'windmove-default-keybindings)
  (windmove-default-keybindings 'meta))
+
+
+(setq display-line-numbers-type nil)
+
+
+;; ;; ;;(setq completion-cycle-threshold 't)
+;; (use-package! vertico
+;;   :config
+;;   :bind (:map vertico-map
+;;               ("TAB"       . #'minibuffer-complete)
+;;               ("DEL"       . #'vertico-directory-delete-char)
+;;               ("RET"       . #'minibuffer-force-complete-and-exit)))
+
+;; (use-package vertico-directory
+;;   :after vertico
+;;   :ensure nil
+;;   ;; More convenient directory navigation commands
+;;   :bind (:map vertico-map
+;;               ("RET" . vertico-directory-enter)
+;;               ("DEL" . vertico-directory-delete-char)
+;;               ("M-DEL" . vertico-directory-delete-word))
+;;   ;; Tidy shadowed file names
+;;   :hook (rfn-eshadow-update-overlay . vertico-directory-tidy))
+
+;;(keymap-set vertico-map "?" #'minibuffer-completion-help)
+;;(keymap-set vertico-map "M-RET" #'minibuffer-force-complete-and-exit)
+;;(keymap-set vertico-map "M-TAB" #'minibuffer-complete)
+
+;(keymap-set vertico-map "M-TAB" #'minibuffer-complete)
