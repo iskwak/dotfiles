@@ -86,7 +86,6 @@
   :init
   (nyan-mode))
 
-
 (savehist-mode)
 
 ;;(add-to-list 'initial-frame-alist '(fullscreen . maximized))
@@ -97,14 +96,36 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; vertico setup
-;; ;; ;;(setq completion-cycle-threshold 't)
+(use-package! vertico
+  :config
+  :bind (:map vertico-map
+              ("TAB"       . #'minibuffer-complete)
+              ("<return>"  . #'exit-minibuffer)))
+
+;; attempting to get vertico to behave more similar to UI's im used to
+;; (setq completion-cycle-threshold 't)
+;; (use-package! vertico
+;;  :config
+;;
+;;  )
+;; (use-package! vertico
+;;   :config
+;;   (keymap-set vertico-map "TAB" #'minibuffer-complete))
+;; (use-package! orderless
+;;   :init
+;;   ;; Configure a custom style dispatcher (see the Consult wiki)
+;;   ;; (setq orderless-style-dispatchers '(+orderless-consult-dispatch orderless-affix-dispatch)
+;;   ;;       orderless-component-separator #'orderless-escapable-split-on-space)
+;;   (setq completion-styles '(orderless basic)
+;;         completion-category-defaults nil
+;;         completion-category-overrides '((file (styles partial-completion)))))
+
 ;; (use-package! vertico
 ;;   :config
 ;;   :bind (:map vertico-map
-;;               ("TAB"       . #'minibuffer-complete)
-;;               ("DEL"       . #'vertico-directory-delete-char)
-;;               ("RET"       . #'minibuffer-force-complete-and-exit)))
-
+;;               ("TAB"       . #'minibuffer-complete)))
+;;               ;;("RET"       . #'minibuffer-force-complete-and-exit)))
+;;("DEL"       . #'vertico-directory-delete-char)
 ;; (use-package vertico-directory
 ;;   :after vertico
 ;;   :ensure nil
