@@ -79,9 +79,6 @@
 (when (fboundp 'windmove-default-keybindings)
  (windmove-default-keybindings 'meta))
 
-
-(setq display-line-numbers-type nil)
-
 (global-set-key (kbd "M-,") 'scroll-up-line)
 (global-set-key (kbd "M-m") 'scroll-down-line)
 
@@ -89,6 +86,17 @@
   :init
   (nyan-mode))
 
+
+(savehist-mode)
+
+;;(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+(add-hook 'window-setup-hook #'toggle-frame-maximized)
+
+
+;;(setq display-line-numbers-type nil)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; vertico setup
 ;; ;; ;;(setq completion-cycle-threshold 't)
 ;; (use-package! vertico
 ;;   :config
