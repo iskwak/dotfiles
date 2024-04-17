@@ -91,6 +91,8 @@
 ;;(add-to-list 'initial-frame-alist '(fullscreen . maximized))
 (add-hook 'window-setup-hook #'toggle-frame-maximized)
 
+;; restore normal tab behavior
+(setq tab-always-indent 'complete)
 
 ;;(setq display-line-numbers-type nil)
 
