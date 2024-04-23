@@ -95,6 +95,7 @@
 (setq tab-always-indent 'complete)
 
 ;;(setq display-line-numbers-type nil)
+(+global-word-wrap-mode +1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; vertico setup
