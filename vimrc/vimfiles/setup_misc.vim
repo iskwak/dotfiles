@@ -31,3 +31,9 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_
 " omnifunc
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
+
+" use alt+arrow keys to navigate windows
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
