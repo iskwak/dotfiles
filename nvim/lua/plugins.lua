@@ -12,8 +12,8 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 
-    -- alignment
-    { "junegunn/vim-easy-align" },
+    -- alignment (commented out -- not in use)
+    -- { "junegunn/vim-easy-align" },
 
     -- file explorer (lazy-load on command)
     {
@@ -35,26 +35,63 @@ require("lazy").setup({
         end,
     },
 
-    -- status line
+    -- status line (lightline kept for reference, lualine active)
+    -- {
+    --     "itchyny/lightline.vim",
+    --     config = function()
+    --         vim.g.lightline = {
+    --             colorscheme = "wombat",
+    --             component_function = { gitbranch = "FugitiveHead" },
+    --             active = {
+    --                 left = {
+    --                     { "mode", "fugitive" },
+    --                     { "gitbranch", "readonly", "relativepath", "modified" },
+    --                     { "ctrlpmark" },
+    --                 },
+    --                 right = { { "lineinfo" }, { "percent" } },
+    --             },
+    --             inactive = {
+    --                 left  = { { "relativepath", "modified" } },
+    --                 right = { { "lineinfo" }, { "percent" } },
+    --             },
+    --         }
+    --     end,
+    -- },
+
+    -- nyancat statusline component (requires lualine)
     {
-        "itchyny/lightline.vim",
+        "abosnjakovic/nyan.nvim",
         config = function()
-            vim.g.lightline = {
-                colorscheme = "wombat",
-                component_function = { gitbranch = "FugitiveHead" },
-                active = {
-                    left = {
-                        { "mode", "fugitive" },
-                        { "gitbranch", "readonly", "relativepath", "modified" },
-                        { "ctrlpmark" },
+            require("nyan").setup({
+                renderer = "space",
+            })
+        end,
+    },
+
+    {
+        "nvim-lualine/lualine.nvim",
+        dependencies = { "abosnjakovic/nyan.nvim" },
+        config = function()
+            require("lualine").setup({
+                options = { theme = "auto" },
+                sections = {
+                    lualine_a = { "mode" },
+                    lualine_b = { "branch", "diff", "diagnostics" },
+                    lualine_c = { { "filename", path = 1 } },  -- relative path
+                    lualine_x = {
+                        {
+                            require("nyan").get,
+                            -- cond = require("nyan").should_display,  -- disabled for debugging
+                        },
                     },
-                    right = { { "lineinfo" }, { "percent" } },
+                    lualine_y = { "progress" },
+                    lualine_z = { "location" },
                 },
-                inactive = {
-                    left  = { { "relativepath", "modified" } },
-                    right = { { "lineinfo" }, { "percent" } },
+                inactive_sections = {
+                    lualine_c = { { "filename", path = 1 } },
+                    lualine_x = { "location" },
                 },
-            }
+            })
         end,
     },
 
@@ -68,6 +105,7 @@ require("lazy").setup({
     },
 
     -- color themes
+    { "embark-theme/vim", name = "embark" },
     { "junegunn/seoul256.vim" },
     { "kristiandupont/shades-of-teal" },
     { "widatama/vim-phoenix" },
@@ -83,7 +121,14 @@ require("lazy").setup({
     -- elixir
     { "elixir-editors/vim-elixir" },
 
+    -- claude code cli integration
+    {
+        "coder/claudecode.nvim",
+        dependencies = { "folke/snacks.nvim" },
+        config = true,
+    },
+
 })
 
 -- colorscheme (set after plugins are loaded)
-vim.cmd("colorscheme seoul256")
+vim.cmd("colorscheme embark")
