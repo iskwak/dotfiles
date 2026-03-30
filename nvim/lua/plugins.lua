@@ -105,6 +105,11 @@ require("lazy").setup({
     },
 
     -- color themes
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        priority = 1000,
+    },
     { "embark-theme/vim", name = "embark" },
     { "junegunn/seoul256.vim" },
     { "kristiandupont/shades-of-teal" },
@@ -150,4 +155,4 @@ require("lazy").setup({
 })
 
 -- colorscheme (set after plugins are loaded)
-vim.cmd("colorscheme embark")
+vim.cmd("colorscheme catppuccin-mocha")
