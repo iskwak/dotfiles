@@ -147,8 +147,8 @@ require("lazy").setup({
 
     -- claude code cli integration
     {
-        "coder/claudecode.nvim",
-        dependencies = { "folke/snacks.nvim" },
+        "greggh/claude-code.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
         config = true,
     },
 
