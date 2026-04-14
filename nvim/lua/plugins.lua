@@ -97,14 +97,15 @@ require("lazy").setup({
 
     -- git integration
     { "tpope/vim-fugitive" },
+    -- color themes
     {
-        "lewis6991/gitsigns.nvim",   -- replaces vim-gitgutter
-        config = function()
-            require("gitsigns").setup()
-        end,
+        "folke/tokyonight.nvim",
+        priority = 1000,
+        opts = {
+            style = "moon",  -- "storm" | "moon" | "night" | "day"
+        },
     },
 
-    -- color themes
     {
         "catppuccin/nvim",
         name = "catppuccin",
@@ -155,4 +156,4 @@ require("lazy").setup({
 })
 
 -- colorscheme (set after plugins are loaded)
-vim.cmd("colorscheme catppuccin-mocha")
+vim.cmd("colorscheme tokyonight-moon")
