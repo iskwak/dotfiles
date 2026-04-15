@@ -124,8 +124,6 @@ require("lazy").setup({
         dependencies = { "godlygeek/tabular" },
     },
 
-    -- elixir
-    { "elixir-editors/vim-elixir" },
 
     -- GitHub issues & PRs
     {
