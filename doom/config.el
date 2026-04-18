@@ -159,4 +159,7 @@
 ;;(keymap-set vertico-map "M-RET" #'minibuffer-force-complete-and-exit)
 ;;(keymap-set vertico-map "M-TAB" #'minibuffer-complete)
 
-;(keymap-set vertico-map "M-TAB" #'minibuffer-complete)
+(use-package! claude-code-ide)
+
+(map! :leader
+      "." #'projectile-find-file)
