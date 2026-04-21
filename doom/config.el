@@ -88,8 +88,8 @@
 
 (savehist-mode)
 
-;;(add-to-list 'initial-frame-alist '(fullscreen . maximized))
-(add-hook 'window-setup-hook #'toggle-frame-maximized)
+(add-to-list 'initial-frame-alist '(width . 210))
+(add-to-list 'initial-frame-alist '(height . 59))
 
 ;; restore normal tab behavior
 (setq tab-always-indent 'complete)
@@ -160,6 +160,10 @@
 ;;(keymap-set vertico-map "M-TAB" #'minibuffer-complete)
 
 (use-package! claude-code-ide)
+
+(after! vterm
+  (add-to-list 'vterm-keymap-exceptions "S-<return>")
+  (add-to-list 'vterm-keymap-exceptions "C-<escape>"))
 
 (map! :leader
       "." #'projectile-find-file)
