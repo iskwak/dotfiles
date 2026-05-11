@@ -159,7 +159,14 @@
 ;;(keymap-set vertico-map "M-RET" #'minibuffer-force-complete-and-exit)
 ;;(keymap-set vertico-map "M-TAB" #'minibuffer-complete)
 
-(use-package! claude-code-ide)
+(use-package! claude-code-ide
+  :config
+  (setq claude-code-ide-no-flicker t)
+  (add-hook 'vterm-mode-hook
+            (lambda ()
+              (when (and (buffer-name)
+                         (string-match-p "claude" (buffer-name)))
+                (display-line-numbers-mode -1)))))
 
 (after! vterm
   (add-to-list 'vterm-keymap-exceptions "S-<return>")
