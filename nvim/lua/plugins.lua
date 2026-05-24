@@ -21,6 +21,7 @@ require("lazy").setup({
         cmd = "NERDTreeToggle",
         dependencies = { "Xuyuanp/nerdtree-git-plugin" },
         config = function()
+            vim.g.NERDTreeShowHidden = 1
             vim.g.NERDTreeGitStatusIndicatorMapCustom = {
                 Modified  = "M",
                 Staged    = "+",
