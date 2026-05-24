@@ -23,6 +23,6 @@ Run `./install-icons.sh` from this folder. It:
 
 - Symlinks `kitty.desktop` (from this dotfiles folder) to `~/.local/share/applications/kitty.desktop`
 - Symlinks kitty's bundled icons to `~/.local/share/icons/hicolor/`
-- Refreshes the desktop and icon caches
+- Refreshes the desktop database
 
 The custom `kitty.desktop` in this folder adds `StartupWMClass=kitty`, which is required for GNOME to group all kitty windows under one taskbar icon. The bundled desktop file at `~/.local/kitty.app/share/applications/kitty.desktop` is missing this field and should not be used.
